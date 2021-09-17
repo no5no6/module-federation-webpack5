@@ -2,13 +2,13 @@ import faker from 'faker'
 const {name , phone} = faker
 
 const mount = (el) => {
-  let list = ''
+  let dom = '<h1>ListView</h1>'
 
-  for( i=0; i<6; i++ ) {
-    list += `<div>name: ${ name.firstName} ${name.lastName} tek: ${phone.phoneNumber}</div>`
+  for(let i=0; i<6; i++ ) {
+    dom += `<div>name: ${ name.firstName()} ${name.lastName() }  tel: ${phone.phoneNumber() }</div>`
   }
 
-  el.innerHTML = list
+  el.innerHTML = dom
 }
 
 if(process.env.NODE_ENV === 'development') {
@@ -17,3 +17,4 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 export { mount }
+

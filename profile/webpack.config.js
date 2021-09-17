@@ -4,12 +4,12 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 8081
+    port: 8082
   },
   plugins: [
     new ModuleFederationPlugin(
       {
-        name: 'list',
+        name: 'profile',
         filename: 'remoteEntry.js',
         exposes: {
           './Index': './src/bootstrap.js'

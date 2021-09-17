@@ -1,10 +1,10 @@
 {
-  "name": "manage",
+  "name": "profile",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve"
+    "serve": "webpack serve"
   },
   "keywords": [],
   "dependencies": {
